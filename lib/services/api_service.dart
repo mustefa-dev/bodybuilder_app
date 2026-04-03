@@ -4,9 +4,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class ApiService {
   final Dio _dio = Dio(BaseOptions(
-    // NOTE: In Emulator, 10.0.2.2 connects to actual localhost. 
-    // If testing on a real physical device, use external IP: http://194.163.154.2/api
-    baseUrl: 'https://localhost:7153/api', 
+    // Connected directly to the live Dokploy backend!
+    baseUrl: 'https://clinic.taco5k.site/api', 
     connectTimeout: const Duration(seconds: 10),
     receiveTimeout: const Duration(seconds: 10),
     headers: {"Content-Type": "application/json"},
